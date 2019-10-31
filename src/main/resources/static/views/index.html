@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Energy Australia Coding Test Page</title>
+</head>
+<body ng-app="recordLabel">
+<hr/>
+<div class="container" ng-controller="RecordLabelController">
+   <div class="row">
+    <h2>Formatted JSON data</h2>
+   </div>
+    <hr/>
+    <hr/>
+    <div class="row" ng-repeat="recordLabel in allRecordLabels">
+        <div class="">
+            <h3>{{recordLabel.name}}</h3>
+            <span ng-repeat="band in recordLabel.bands" class="spacing">{{band.name}}</br>
+            	 <span ng-repeat="festival in band.festivals" class="spacingSecond">{{festival}}
+             	 </span>
+             	 </br>
+            </span>
+        </div>
+    </div>
+    
+     <hr/>
+    <div class="row">
+        <p>{{allRecordLabels | json}}</p>
+    </div>
+    
+</div>
+</body>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/RecordLabelController.js"></script>
+<script src="js/app/RecordLabelService.js"></script>
+<link rel="stylesheet" href="css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/app/app.css"/>
+</html>

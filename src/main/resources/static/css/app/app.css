@@ -1,0 +1,9 @@
+body{
+    background-color: #efefef;
+}
+span.spacing{
+    margin-left: 40px;
+}
+span.spacingSecond{
+    margin-left: 100px;
+}
